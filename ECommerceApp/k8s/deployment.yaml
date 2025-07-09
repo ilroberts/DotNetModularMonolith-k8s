@@ -27,9 +27,9 @@ spec:
             - containerPort: 8080
           env:
             - name: ASPNETCORE_URLS
-              value: "http://+:8080"
+              value: http://+:8080
             - name: ASPNETCORE_PATHBASE
-              value: "/modulith"
+              value: /modulith
             - name: ConnectionStrings__DefaultConnection
               valueFrom:
                 secretKeyRef:
@@ -61,8 +61,8 @@ spec:
             failureThreshold: 30
           resources:
             requests:
-              cpu: "100m"
-              memory: "128Mi"
+              cpu: 100m
+              memory: 128Mi
             limits:
-              cpu: "500m"
-              memory: "512Mi"
+              cpu: 500m
+              memory: 512Mi
