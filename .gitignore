@@ -1,0 +1,32 @@
+# .gitignore for Kubernetes manifests repository
+
+# Ignore editor and OS files
+.DS_Store
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# Ignore kustomize build output
+kustomize-build/
+
+# Ignore secrets and sensitive files
+*.secret.yaml
+*.sealedsecret.yaml
+
+# Ignore local environment files
+.env
+.env.*
+
+# Ignore log files
+*.log
+
+# Ignore Helm chart output (if used)
+charts/
+release.yaml
+
+# Ignore backup files
+*~
+
+# Ignore node_modules (if any JS tooling is used)
+node_modules/
