@@ -8,4 +8,4 @@ data:
   REDIS_HOST: "my-redis-master"
   REDIS_PORT: "6379"
   REDIS_USER: "default"
-  OTEL_EXPORTER_OTLP_ENDPOINT: "http://jaeger-collector:4318"
+  OTEL_EXPORTER_OTLP_ENDPOINT: "http://jaeger-collector.devops.svc.cluster.local:4317"
