@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: modularmonolith
-          image: ghcr.io/ilroberts/dotnetmodularmonolith/modularmonolith:b4a6651
+          image: ghcr.io/ilroberts/dotnetmodularmonolith/modularmonolith:f80ba85
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
@@ -39,7 +39,7 @@ spec:
               valueFrom:
                 configMapKeyRef:
                   name: modulith-config
-                  key: OTEL_EXPORTER_OTLP_ENDPOINT      
+                  key: OTEL_EXPORTER_OTLP_ENDPOINT
           readinessProbe:
             httpGet:
               path: /
