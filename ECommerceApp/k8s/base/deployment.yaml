@@ -35,6 +35,11 @@ spec:
                 secretKeyRef:
                   name: app-secret
                   key: connection-string
+            - name: OTEL_EXPORTER_OTLP_ENDPOINT
+              valueFrom:
+                configMapKeyRef:
+                  name: modulith-config
+                  key: OTEL_EXPORTER_OTLP_ENDPOINT      
           readinessProbe:
             httpGet:
               path: /
