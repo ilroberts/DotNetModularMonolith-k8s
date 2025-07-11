@@ -57,6 +57,11 @@ spec:
                   key: REDIS_PASSWORD
             - name: REDIS_CONNECTION_STRING
               value: $(REDIS_HOST):$(REDIS_PORT),user=$(REDIS_USER),password=$(REDIS_PASSWORD)
+            - name: OTEL_EXPORTER_OTLP_ENDPOINT
+              valueFrom:
+                configMapKeyRef:
+                  name: admin-ui-config
+                  key: OTEL_EXPORTER_OTLP_ENDPOINT
           livenessProbe:
             httpGet:
               path: /HealthCheck
