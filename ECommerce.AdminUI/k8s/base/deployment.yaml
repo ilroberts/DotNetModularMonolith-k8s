@@ -5,6 +5,7 @@ metadata:
   labels:
     app: admin-ui
 spec:
+  revisionHistoryLimit: 4
   replicas: 2
   selector:
     matchLabels:
