@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: admin-ui
-          image: ghcr.io/ilroberts/dotnetmodularmonolith/admin-ui:34ddedb
+          image: ghcr.io/ilroberts/dotnetmodularmonolith/admin-ui:e14697e
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
